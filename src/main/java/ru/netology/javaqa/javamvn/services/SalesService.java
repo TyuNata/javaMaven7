@@ -37,9 +37,9 @@ public class SalesService {
 
     public long countMonthsBelowAverage(long[] sales) {
         long count = 0;
-        long monthBelow = findAverage(sales);
+        long average = findAverage(sales);
         for (long sale : sales) {
-            if (sale < monthBelow) {
+            if (sale < average) {
                 count++;
             }
         }
@@ -48,9 +48,9 @@ public class SalesService {
 
     public long countMonthsAboveAverage(long[] sales) {
         long count = 0;
-        long monthAbove = findAverage(sales);
+        long average = findAverage(sales);
         for (long sale : sales) {
-            if (sale > monthAbove) {
+            if (sale > average) {
                 count++;
             }
         }
